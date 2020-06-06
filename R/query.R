@@ -103,7 +103,7 @@ print.logician_query_result <- function(x, ...) {
 #' @param x an object
 #' @param n an length 1 integer >= 1.
 #'   sometimes that can result in an infinite loop
-#' @param ...
+#' @param ... unused dots
 #'
 #' @return
 #' For each solution a list of substitions.
@@ -121,8 +121,8 @@ print.logician_query_result <- function(x, ...) {
 #' )
 #' iter <- logician_query(database, path(berlin, X))
 #' head(iter, 4) # get the first 4 results if they exists
-#'
 #' @export
+#' @importFrom utils head
 head.logician_iterator <- function(x, n = 6, ...) {
   stopifnot(n >= 1, is.numeric(n), length(n) == 1)
   res <- vector("list", length = n)

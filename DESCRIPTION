@@ -23,4 +23,5 @@ Collate:
     'query.R'
     'unification.R'
 Imports: 
-    methods
+    methods,
+    utils

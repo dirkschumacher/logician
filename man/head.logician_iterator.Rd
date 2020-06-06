@@ -12,7 +12,7 @@
 \item{n}{an length 1 integer >= 1.
 sometimes that can result in an infinite loop}
 
-\item{...}{}
+\item{...}{unused dots}
 }
 \value{
 For each solution a list of substitions.
@@ -33,5 +33,4 @@ database <- logician_database(
 )
 iter <- logician_query(database, path(berlin, X))
 head(iter, 4) # get the first 4 results if they exists
-
 }
