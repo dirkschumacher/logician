@@ -1,0 +1,25 @@
+Package: logician
+Title: Logic Programming in R
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Dirk",
+           family = "Schumacher",
+           role = c("aut", "cre"),
+           email = "mail@dirk-schumacher.net")
+Description: Define and query logic programs. It is modelled after prolog/datalog
+  with an R flavor.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
+Suggests: 
+    testthat
+Collate: 
+    'types.R'
+    'database.R'
+    'package.R'
+    'query.R'
+    'unification.R'
+Imports: 
+    methods
