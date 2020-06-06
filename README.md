@@ -12,9 +12,9 @@ status](https://github.com/dirkschumacher/logician/workflows/R-CMD-check/badge.s
 <!-- badges: end -->
 
 The goal of `logician` is to do logic programming inspired by
-datalog/prolog in R. It is written in R without any external
-dependencies. It targets interactive use and smaller instances of
-logical programs.
+[datalog](https://en.wikipedia.org/wiki/Datalog)/[prolog](https://en.wikipedia.org/wiki/Prolog)
+in R. It is written in R without any external dependencies. It targets
+interactive use and smaller instances of logical programs.
 
 Non-goal: be fully prolog compatible and super fast.
 
@@ -230,7 +230,9 @@ when you want to program with it (e.g. embed it into another package).
     helper functions such as `fact`, `rule`, `atom`, `char`, `clause`,
     `variable`, `int` and `r_expr`.
 
-  - `logician_query` main query function for interactive use.
+  - `logician_query` main query function for interactive use. You can
+    use `head` on an iterator to return the first `n` results (if they
+    exists).
 
   - `logician_query_` same as `logician_query` but expects a `clause` or
     `r_expr`.
