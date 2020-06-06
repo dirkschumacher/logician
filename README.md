@@ -7,6 +7,8 @@
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![R build
+status](https://github.com/dirkschumacher/logician/workflows/R-CMD-check/badge.svg)](https://github.com/dirkschumacher/logician/actions)
 <!-- badges: end -->
 
 The goal of `logician` is to do logic programming inspired by
@@ -254,3 +256,14 @@ when you want to program with it (e.g. embed it into another package).
   - No list support … yet.
   - No cuts. Might never be supported.
   - No higher order terms. Though most likely I will not support them.
+
+## Test Coverage
+
+``` r
+covr::package_coverage()
+#> logician Coverage: 98.08%
+#> R/unification.R: 96.30%
+#> R/database.R: 97.50%
+#> R/types.R: 97.67%
+#> R/query.R: 98.86%
+```
