@@ -60,11 +60,12 @@ library(logician)
 ### A graph example
 
 Here we define a database with two types of elements:
+
 1. a fact for each tuple of nodes that are directly connected
 2. a rule that determines if there exists a path between two nodes.
     * A path between `A` and `B` exists if `A` and `B` are connected OR
-    * if `A` is connected to an intermediate node `X` and there exists a path from
-      `X` to `B`.
+    * if `A` is connected to an intermediate node `Z` and there exists a path from
+      `Z` to `B`.
 
 ```{r}
 database <- logician_database(
