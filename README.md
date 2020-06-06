@@ -13,8 +13,8 @@ status](https://github.com/dirkschumacher/logician/workflows/R-CMD-check/badge.s
 
 The goal of `logician` is to do logic programming inspired by
 [datalog](https://en.wikipedia.org/wiki/Datalog)/[prolog](https://en.wikipedia.org/wiki/Prolog)
-in R. It is written in R without any external dependencies. It targets
-interactive use and smaller instances of logical programs.
+in R. It is written in R without any third-party package dependencies.
+It targets interactive use and smaller instances of logical programs.
 
 Non-goal: be fully prolog compatible and super fast.
 
@@ -37,14 +37,13 @@ remotes::install_github("dirkschumacher/logician")
 
 ## General principle
 
-The general idea is query a database of facts and rules and ask
+The general idea is to query a database of *facts* and *rules* and ask
 questions. `logician` tries prove that your query is either `true` or
 `false`. Since you can use variables, there might be multiple
 assignments to variables that make your query `true`. `logician` will
 return these one by one as an iterator.
 
-This is all work in progress, still a bit hacky at some points but
-usable.
+This is all work in progress and still a bit hacky, but usable.
 
 ## Example
 
