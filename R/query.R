@@ -231,6 +231,15 @@ handle_stack_element.rule_body_iterator <- function(push, pop, database, element
         substitutions = c(element$substitutions, list(substitutions(res))),
         unified_head = element$unified_head
       )
+    } else {
+      depth <- depth - 1
+      if (depth > 0) {
+        evaluate_body_again(
+          terms, depth, push,
+          unified_head = element$unified_head,
+          substitutions = element$substitutions[-length(element$substitutions)]
+        )
+      }
     }
   } else if (depth == n_terms) {
     current_term <- terms[[depth]]

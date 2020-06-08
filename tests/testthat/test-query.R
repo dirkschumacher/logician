@@ -172,3 +172,17 @@ test_that("print query result", {
   iter <- logician_query(database, test2(A))
   expect_output(print(iter$next_value()), "A = 1")
 })
+
+test_that("bounded head rules", {
+  database <- logician_database(
+    test(1L),
+    test(2L),
+    test(3L),
+    test(4L),
+    test2(M, N) := test(M) && test(N) && r(M == N - 1)
+  )
+  iter <- logician_query(database, test2(A, X))
+  expect_true(iter$next_value())
+  expect_true(iter$next_value())
+  expect_true(iter$next_value())
+})
