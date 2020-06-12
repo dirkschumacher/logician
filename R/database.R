@@ -73,7 +73,7 @@ convert_from_r.integer <- function(val) {
 
 starts_with_upper <- function(x) {
   stopifnot(length(x) == 1, nchar(x) >= 1)
-  x[[1]] == toupper(x[[1]])
+  substr(x[1], 1, 1)  == substr(toupper(x[1]), 1, 1)
 }
 
 convert_from_r.name <- function(val) {
